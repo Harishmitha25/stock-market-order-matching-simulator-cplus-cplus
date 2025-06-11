@@ -141,6 +141,85 @@ order ord002 10 shares unexecuted
 
 ---
 
+## How to Compile and Run
+
+### Prerequisites
+
+- A C++ compiler like `g++` (e.g. `g++ version >= 9`)
+- `make` utility should be installed
+
+### Build the Program
+
+Make sure your terminal is inside the project folder (e.g., after cloning):
+
+```bash
+cd stock-market-order-matching-simulator-cplus-cplus
+make
+```
+
+This compiles the program into an executable file named `main`.
+
+> Ensure your source files and `makefile` are in the same top-level folder.
+
+### Run the Program
+
+Use the compiled binary and pass the input filename as a command-line argument:
+
+```bash
+./main input1.txt
+```
+
+The program will:
+
+- Display the current order book after each new order is processed
+- Write executed order details and final unfulfilled orders to `output1.txt`
+
+---
+
+## Compilation & Execution Methods
+
+You can compile and run the program using either of the following methods:
+
+---
+
+### Method 1: Manual Compilation
+
+#### Compile
+
+```bash
+g++ -o main main.cpp
+```
+
+#### Run
+
+- On Windows (PowerShell):
+
+```powershell
+.\main input1.txt
+```
+
+---
+
+### Method 2: Using a Makefile
+
+Save this file as `makefile` (no extension, lowercase).
+
+#### Compile
+
+```bash
+make
+```
+
+#### Run
+
+- On Windows (PowerShell):
+
+```powershell
+.\main input1.txt
+```
+
+---
+
 ## Notes
 - Matching must be done **immediately** upon reading each order.
 - Orders are assumed **divisible** unless otherwise specified.
